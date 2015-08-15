@@ -1,48 +1,55 @@
-			<section id="main">
-				<div class="content">
-					<nav class="filter">
-						<h3>Challenge your Friends</h3>
-						<ul>
-							<li>Filter: </li>
-							<li><a href="#" class="esy">Easy</a></li>
-							<li><a href="#" class="med">Medium</a></li>
-							<li><a href="#" class="hrd">Hard</a></li>
-							<li><a href="#" class="crz">Crazy</a></li>
-						</ul>
-					</nav>
-					<section class="challenge-list">
-						<ul>
-							<li class="esy">
-								<h4>E</h4>
-								<p>Do 3 push-ups!</p>
-								<em class="reward">1 star</em>
-								<a href="#" class="btn send">Send Challenge</a>
-							</li>
-							<li class="esy">
-								<h4>E</h4>
-								<p>Do 5 sit-ups!</p>
-								<em class="reward">1 star</em>
-								<a href="#" class="btn send">Send Challenge</a>
-							</li>
-							<li class="med">
-								<h4>M</h4>
-								<p>Run 2 kilometers!</p>
-								<em class="reward">2 stars</em>
-								<a href="#" class="btn send">Send Challenge</a>
-							</li>
-							<li class="hrd">
-								<h4>H</h4>
-								<p>Do 15 push-ups!</p>
-								<em class="reward">3 stars</em>
-								<a href="#" class="btn send">Send Challenge</a>
-							</li>
-							<li class="crz">
-								<h4>C</h4>
-								<p>Do 20 push-ups and 40 sit-ups!</p>
-								<em class="reward">5 stars</em>
-								<a href="#" class="btn send">Send Challenge</a>
-							</li>
-						</ul>
-					</section>
-				</div>
-			</section>
+<%= render 'shared/difficulty_filter', header: "Today's Challenges" %>
+<section class="challenge-list">
+
+<%if @status.eql? 'pending'%>
+<ul>
+    <li class="esy">
+      <h4>E</h4>
+      <p>Do 3 push-ups!</p>
+      <em class="reward">1 star</em>
+      <!-- <a href="#" class="btn done">Done</a> -->
+    </li>
+    <li class="esy">
+      <h4>E</h4>
+      <p>Do 5 sit-ups!</p>
+      <em class="reward">1 star</em>
+      <a href="#" class="btn done">Done</a>
+    </li>
+    <li class="med">
+      <h4>M</h4>
+      <p>Run 2 kilometers!</p>
+      <em class="reward">2 stars</em>
+      <a href="#" class="btn done">Done</a>
+    </li>
+    <li class="hrd">
+      <h4>H</h4>
+      <p>Do 15 push-ups!</p>
+      <em class="reward">3 stars</em>
+      <!-- <a href="#" class="btn done">Done</a> -->
+    </li>
+    <li class="crz">
+      <h4>C</h4>
+      <p>Do 20 push-ups and 40 sit-ups!</p>
+      <em class="reward">5 stars</em>
+      <!-- <a href="#" class="btn done">Done</a> -->
+    </li>
+    <li class="esy">
+      <h4>E</h4>
+      <p>Do 3 push-ups!</p>
+      <em class="reward">1 star</em>
+      <a href="#" class="btn done">Done</a>
+    </li>
+    <li class="esy">
+      <h4>E</h4>
+      <p>Do 5 sit-ups!</p>
+      <em class="reward">1 star</em>
+      <a href="#" class="btn done">Done</a>
+    </li>
+    
+  </ul>
+<%elsif @status.eql? 'none'%>
+<%= render 'empty_challenges' %>
+<%else%>
+<%= render 'empty_done' %>
+<%end%>
+</section>
