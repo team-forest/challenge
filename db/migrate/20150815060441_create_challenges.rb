@@ -4,6 +4,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.string :name
       t.string :exp
       t.string :status
+      t.integer :user_id
 
       t.timestamps
     end
