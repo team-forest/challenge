@@ -1,0 +1,318 @@
+// Project Challenge
+// DevCUP 2015 - Designed and Developed by Team Forest
+// Team Members - Ralph Sutacio, Rick Tungol, Jan Harold Diaz
+
+@import 'thirds'; //Third party codes such as resets
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,400,600,700);
+
+//Globals
+body{
+	*{
+		box-sizing:border-box;
+	}
+	a{
+		text-decoration: none;
+	}
+	color:#444;
+}
+
+//Variables
+$color-easy:#9fdc6e;
+$color-med:#f2c54c;
+$color-hard:#e44e1a;
+$color-crazy:#a91b14;
+$color-send:#7dc6db;
+$color-done:#4fc127;
+//Typography
+body{
+	font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.container{
+
+}
+
+header{
+
+}
+
+//Dashboard
+div#dashboard{
+	width:100%;
+	min-width: 1220px;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	//Sidebar for Profile
+	aside{
+		flex:3;
+		//background: url(../assets/bg/sidebar.jpg);
+		//background-size: 100% 200px;
+		//background-repeat: no-repeat;
+		text-align: center;
+		padding: 30px 30px;
+		
+		//Headshot
+		.headshot{
+			position: relative;
+		}
+
+		.lvl{
+			background:$color-done;
+			border-radius:50%;
+			color:#fff;
+			width:70px;
+			height: 70px;
+			padding-top:15px;
+			.lbl{
+				font-size:0.7rem;
+				font-weight: 300;
+				letter-spacing: 0.1rem;
+				text-transform: uppercase;
+			}
+			.num{
+				font-size:2rem;
+				font-weight: 700;
+			}
+		}
+
+		.user-img{
+			width:220px;
+			border-radius: 50%;
+			border:5px solid #ccc;
+			margin:15px;
+		}
+
+		h1{
+			font-size: 1.4rem;
+			letter-spacing: 0.2rem;
+			margin-bottom:7px; 
+		}
+
+		h2{
+			color:#555;
+			font-size:0.8rem;
+			letter-spacing: 0.3rem;
+			text-transform: uppercase;
+		}
+
+	}
+
+	//Main Section
+	section#main{
+		min-height: 735px;
+		border-left:2px solid #eee;
+		flex:7;
+		
+		.content{
+			padding:40px;
+		}
+
+		nav.filter{
+			h3{
+				float:left;
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 0.1rem;
+				font-size:1.1rem;
+				margin-top:10px;
+				em{
+					font-size:0.7rem;
+					color:#999;
+					margin-left:15px;
+					&.completed{
+						color:$color-done;
+					}
+				}
+			}
+			ul{
+				text-align: right;
+				border-bottom:1px solid #eee;
+				padding-bottom:25px;
+				margin-right: 15px;
+			}
+			li{
+				display: inline;
+				font-size:0.8rem;
+				margin-right:6px;
+			}
+			li:first-child{
+				margin-right: 15px;
+			}
+			a{
+				padding:8px 12px;
+				background:#ddd;
+				text-decoration: none;
+				border-radius:7px;
+				color:#fff;
+				&:hover{
+					text-decoration: underline;
+				}
+				&.esy{
+					background:$color-easy;
+				}
+				&.med{
+					background:$color-med;
+				}
+				&.hrd{
+					background:$color-hard;
+				}
+				&.crz{
+					background:$color-crazy;
+				}
+			}
+		}
+		//End nav.filter
+		
+		section.challenge-list{
+			max-height: 600px;
+			overflow: auto;
+			
+			//Challenges
+			ul{
+				padding:25px 15px 25px 0;
+			}
+
+			li{
+				border:1px solid;
+				border-radius: 7px;
+				float:left;
+				width:100%;
+				margin-bottom:7px;
+				position:relative;
+				
+				em{
+					position:absolute;
+					height:15px;
+					text-indent: -9999px;
+					bottom:10px;
+					left:92px;
+					background:url(../assets/icons/1star.png) repeat-x;
+				}
+
+				&.esy{
+					border-color: $color-easy;
+					em{
+						
+						width:14px;
+					}
+					h4{color:$color-easy;}
+				}
+
+				&.med{
+					border-color: $color-med;
+					em{
+						background:url(../assets/icons/1star.png);
+						width:28px;
+					}
+					h4{color:$color-med;}
+				}
+
+				&.hrd{
+					border-color: $color-hard;
+					em{
+						background:url(../assets/icons/1star.png);
+						width:42px;
+					}
+					h4{color:$color-hard;}
+				}
+
+				&.crz{
+					border-color: $color-crazy;
+					
+					em{
+						background:url(../assets/icons/1star.png);
+						width:70px;
+					}
+					
+					h4{color:$color-crazy;}
+				}
+			}
+
+			h4{
+				float:left;
+				padding:20px 25px 20px 23px;
+				text-align: center;
+				margin-right: 25px;
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+				border-right: 1px solid;
+				font-weight: 700;
+				color:#fff;
+				width:68px;
+				font-size:1.4rem;
+			}
+
+			p{
+				padding:16px 0 13px;
+				font-weight: 600;
+				float:left;
+			}
+
+			a.btn{
+				float:right;
+				font-size:0.6rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				padding:18px 12px 17px;
+				margin:9px 8px 0 0;
+				border-radius: 7px;
+				letter-spacing: 0.1rem;
+				color:#fff;
+				
+				&.send{
+					background:$color-send;
+					&:hover{background: darken($color-send, 10%);}
+				}
+				&.done{
+					color:#fff;
+					background:$color-done;
+					&:hover{background: lighten($color-done, 10%);}
+				}
+
+			}
+			
+			// End of Challenge List Styles
+
+			.empty{
+
+				padding:200px 25px 25px;
+				text-align: center;
+
+				h2{
+					font-size:2rem;
+					font-weight: 700;
+				} 
+				p{
+					float:none;
+					margin-bottom:30px;
+				}
+				
+				.btn{
+					float:none;
+				}
+
+				&.completed{
+					h2{
+						color:$color-done;
+					}
+				}
+			}
+
+		}
+	}
+	//End section#main
+}
+
+footer{
+	width:100%;
+	bottom: 0;
+	border-top:1px solid #eee;
+	text-align: right;
+	padding:12px 35px;
+	
+	small{
+		color:#888;
+		font-size:0.9rem;
+	}
+}

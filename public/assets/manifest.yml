@@ -1,0 +1,27 @@
+---
+bg/sidebar.jpg: bg/sidebar-5c79b80bf08b1b8e6eb159837845324c.jpg
+bg/sidebar/index.jpg: bg/sidebar-5c79b80bf08b1b8e6eb159837845324c.jpg
+dummy/user-b1.jpg: dummy/user-b1-564b5f79e8e1eb9c9bcb20348a2ee2c0.jpg
+dummy/user-b1/index.jpg: dummy/user-b1-564b5f79e8e1eb9c9bcb20348a2ee2c0.jpg
+dummy/user-g1.jpg: dummy/user-g1-d7a905bda33ec973488f807f7461e5aa.jpg
+dummy/user-g1/index.jpg: dummy/user-g1-d7a905bda33ec973488f807f7461e5aa.jpg
+dummy/user-g2.jpg: dummy/user-g2-0a8e4a46a2e0e36ffc188efab1a75822.jpg
+dummy/user-g2/index.jpg: dummy/user-g2-0a8e4a46a2e0e36ffc188efab1a75822.jpg
+dummy/user-g3.jpg: dummy/user-g3-c3e47a036ac608f1337f82e28a15f630.jpg
+dummy/user-g3/index.jpg: dummy/user-g3-c3e47a036ac608f1337f82e28a15f630.jpg
+icons/1star.png: icons/1star-df1954ad082256a044be211f45f938b0.png
+icons/1star/index.png: icons/1star-df1954ad082256a044be211f45f938b0.png
+icons/2stars.png: icons/2stars-9f05821d6ca3c0cd4e78e2e2ece60acf.png
+icons/2stars/index.png: icons/2stars-9f05821d6ca3c0cd4e78e2e2ece60acf.png
+icons/3stars.png: icons/3stars-b6875bcbaca219766ebf902367d0fc84.png
+icons/3stars/index.png: icons/3stars-b6875bcbaca219766ebf902367d0fc84.png
+icons/4stars.png: icons/4stars-f3240e8532ff2088b8469a1ef985d2b1.png
+icons/4stars/index.png: icons/4stars-f3240e8532ff2088b8469a1ef985d2b1.png
+icons/5stars.png: icons/5stars-b23dce897625d88f6eff06c12dfdd939.png
+icons/5stars/index.png: icons/5stars-b23dce897625d88f6eff06c12dfdd939.png
+application.js: application-47b44084585f598b722954036f95b1b4.js
+application/index.js: application-47b44084585f598b722954036f95b1b4.js
+application.css: application-875f0d42a52ff5536404da8fda8d423b.css
+application/index.css: application-875f0d42a52ff5536404da8fda8d423b.css
+jquery.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
+jquery/index.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
