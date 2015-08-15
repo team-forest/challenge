@@ -9,31 +9,16 @@
 
 </head>
 <body>
-
-
 <div id="dashboard">
-
-		<%if current_user%>
-			<aside>
-				<div class="lvl">
-					<p class="lbl">level</p>
-					<p class="num">1</p>
-				</div>
-				
-				<%=image_tag current_user.img, class: "user-img"%>
-				<h1><%=current_user.name%></h1>
-				<h2>Amateur</h2>
-
-			</aside>
-
-		 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-		<%end%>
-
-<%= yield %>
+  <%= render 'shared/sidebar' %>
+  <section id="main">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </section>
 </div>
-		<footer>
-			<small>Project Challenge - DevCUP 2015 Entry by <em>Team Forest</em></small>
-		</footer>
+<%= render 'shared/footer' %>
 
+<%= render 'shared/modal' if @modal %>
 </body>
 </html>

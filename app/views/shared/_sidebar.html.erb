@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+  <aside>
+    <div class="lvl">
+      <p class="lbl">level</p>
+      <p class="num">1</p>
+    </div>
+    
+    <%=image_tag current_user.img, class: "user-img"%>
+    <h1><%=current_user.name%></h1>
+    <h2>Amateur</h2>
+
+  </aside>
+
+ <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<%end%>
