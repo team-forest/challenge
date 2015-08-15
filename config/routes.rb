@@ -1,9 +1,6 @@
 Spotisquare::Application.routes.draw do
-  get "sessions/create"
-
-  get "sessions/destroy"
-
-  devise_for :users
+  get "callbacks/facebook"
+  devise_for :users, controllers: { omniauth_callbacks: "callbacks" }
 
   root :to => 'home#index'
   get "session/create"

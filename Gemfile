@@ -11,6 +11,7 @@ gem 'omniauth-facebook'
 gem 'devise'
 gem 'awesome_print'
 gem 'httparty'
+gem 'koala'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -30,6 +31,7 @@ end
 group :development do
   gem 'quiet_assets'
   gem 'test-unit'
+  gem 'pry'
 end
 
 gem 'jquery-rails'
