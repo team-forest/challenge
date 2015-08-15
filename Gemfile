@@ -24,6 +24,7 @@ end
 
 group :development do
   gem 'quiet_assets'
+  gem 'test-unit'
 end
 
 gem 'jquery-rails'

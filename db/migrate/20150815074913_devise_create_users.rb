@@ -5,6 +5,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
+      t.string :name 
+      t.string :title
+      t.string :img
+
+      # facebook api
+      t.string :uid 
+      t.string :token
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
