@@ -1,6 +1,11 @@
+require 'omniauth-facebook'
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  config.omniauth :facebook, '493535674146430', 'aad181eafa7a555fe70926a5cc2ba13e', 
+    scope: 'public_profile,user_friends,email',
+    info_fields: 'email,name'
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
