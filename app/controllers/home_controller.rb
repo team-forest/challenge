@@ -11,6 +11,11 @@ class HomeController < ApplicationController
 	end
 
 
+  def cChallenge
+    Challenge.addChallenge(params,current_user.id)
+    redirect_to challenge_list_path
+  end
+
   def get_friend_list
   end
 end

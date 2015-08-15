@@ -9,4 +9,7 @@ Spotisquare::Application.routes.draw do
   get "/fb/auth", to: 'sessions#create'
 
   get "/challenge" => "home#challenge"
+  get "/challenge/create" => "home#createChallenge"
+  post "/challenge/cChallenge" => "home#cChallenge"
+  get "/challenge/list" => "home#challengeList"
 end

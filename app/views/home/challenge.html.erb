@@ -1,0 +1,108 @@
+<%if @status.eql? 'pending'%>
+		
+			<section id="main">
+				<div class="content">
+					<nav class="filter">
+						<h3>Today's Challenges <em>4 out of 7 Completed</em></h3>
+						<ul>
+							<li>Filter: </li>
+							<li><a href="#" class="esy">Easy</a></li>
+							<li><a href="#" class="med">Medium</a></li>
+							<li><a href="#" class="hrd">Hard</a></li>
+							<li><a href="#" class="crz">Crazy</a></li>
+						</ul>
+					</nav>
+					<section class="challenge-list">
+						<ul>
+							<li class="esy">
+								<h4>E</h4>
+								<p>Do 3 push-ups!</p>
+								<em class="reward">1 star</em>
+								<!-- <a href="#" class="btn done">Done</a> -->
+							</li>
+							<li class="esy">
+								<h4>E</h4>
+								<p>Do 5 sit-ups!</p>
+								<em class="reward">1 star</em>
+								<a href="#" class="btn done">Done</a>
+							</li>
+							<li class="med">
+								<h4>M</h4>
+								<p>Run 2 kilometers!</p>
+								<em class="reward">2 stars</em>
+								<a href="#" class="btn done">Done</a>
+							</li>
+							<li class="hrd">
+								<h4>H</h4>
+								<p>Do 15 push-ups!</p>
+								<em class="reward">3 stars</em>
+								<!-- <a href="#" class="btn done">Done</a> -->
+							</li>
+							<li class="crz">
+								<h4>C</h4>
+								<p>Do 20 push-ups and 40 sit-ups!</p>
+								<em class="reward">5 stars</em>
+								<!-- <a href="#" class="btn done">Done</a> -->
+							</li>
+							<li class="esy">
+								<h4>E</h4>
+								<p>Do 3 push-ups!</p>
+								<em class="reward">1 star</em>
+								<a href="#" class="btn done">Done</a>
+							</li>
+							<li class="esy">
+								<h4>E</h4>
+								<p>Do 5 sit-ups!</p>
+								<em class="reward">1 star</em>
+								<a href="#" class="btn done">Done</a>
+							</li>
+							
+						</ul>
+					</section>
+				</div>
+			</section>
+<%elsif @status.eql? 'none'%>
+<section id="main">
+				<div class="content">
+					<nav class="filter">
+						<h3>Today's Challenges</h3>
+						<ul>
+							<li>Filter: </li>
+							<li><a href="#" class="esy">Easy</a></li>
+							<li><a href="#" class="med">Medium</a></li>
+							<li><a href="#" class="hrd">Hard</a></li>
+							<li><a href="#" class="crz">Crazy</a></li>
+						</ul>
+					</nav>
+					<section class="challenge-list">
+						<div class="empty">
+							<h2>No challenges available</h2>
+							<p>Add or invite your friends to start!</p>
+							<a href="#" class="btn send">Add / Invite Friends</a>
+						</div>
+					</section>
+				</div>
+			</section>
+<%else%>
+<section id="main">
+				<div class="content">
+					<nav class="filter">
+						<h3>Today's Challenges</h3>
+						<ul>
+							<li>Filter: </li>
+							<li><a href="#" class="esy">Easy</a></li>
+							<li><a href="#" class="med">Medium</a></li>
+							<li><a href="#" class="hrd">Hard</a></li>
+							<li><a href="#" class="crz">Crazy</a></li>
+						</ul>
+					</nav>
+					<section class="challenge-list">
+						<div class="empty completed">
+							<h2>Congratulations!</h2>
+							<p>You've completed all the challenges!</p>
+							<a href="#" class="btn send">Challenge your Friends!</a>
+						</div>
+					</section>
+				</div>
+			</section>
+<%end%>

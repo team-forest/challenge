@@ -1,0 +1,20 @@
+<section id="main">
+				<div class="content">
+					<nav class="filter">
+						<h3>Create a Challenge</h3>
+					
+					</nav>
+					<section class="challenge-list">
+					<br><br><br>
+					 <%= form_tag 'cChallenge', method: :post, class: "pure-form pure-form-stacked" do %>
+				     <%= text_field_tag :name, '', placeholder:"challenge name", size:"20x6" ,autofocus: true%><br>
+				     <%= text_field_tag :exp, '', placeholder:"difficulty", size:"20x6" ,autofocus: true%>
+				        <br>
+				        <%= submit_tag "submit challenge", class: "pure-button"%>
+				    <%end%>
+
+
+
+					</section>
+				</div>
+			</section>
