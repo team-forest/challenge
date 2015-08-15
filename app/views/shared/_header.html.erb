@@ -1,0 +1,12 @@
+<header>
+			<a href="#" class="logo"><img src=<%=asset_path 'logo.png'%> alt=""></a>
+			<nav>
+				<ul>
+					<li><%=link_to 'My Challenges', challenges_path%></li>
+					<li><a href="#">Challenge a Friend</a></li>
+					<li class="noti"><a href="#" class="show-noti"><em class="new"></em><img src=<%=asset_path 'icons/noti.png'%> alt=""></a></li>
+					<li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+</li>
+				</ul>
+			</nav>
+		</header>
