@@ -21,7 +21,7 @@
         </div>
         <p><%= challenge.name %></p>
         <em class="reward"><%= challenge.exp %> star</em>
-        <div id='progress'>
+        <div id='progress<%= challenge.id %>'>
           <% if challenge.status == 'done'%>
             <span class="status completed">Completed</span>
           <% else %>

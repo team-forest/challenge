@@ -67,7 +67,7 @@ $(document).ready(function() {
       type: "GET",
       data: {id: id},
       success: function(data){
-        $('#progress').html(msg); 
+        $('#progress'+ id).html(msg); 
       }
     });
   });
