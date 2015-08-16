@@ -92,6 +92,7 @@ div#dashboard{
 	display: flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
+	margin:0 auto;
 	//Sidebar for Profile
 	aside{
 		flex:3;
@@ -260,7 +261,7 @@ div#dashboard{
 
 	//Main Section
 	section#main{
-		min-height: 405px;
+		min-height: 605px;
 		border-left:1px solid #eee;
 		flex:7;
 		
@@ -318,22 +319,22 @@ div#dashboard{
 					border-bottom-width:1px;
 				}
 				
-				&.esy{
+				&.easy{
 					background:$color-easy;
 					border-color: darken($color-easy, 20%);
 				}
 				
-				&.med{
+				&.medium{
 					background:$color-med;
 					border-color: darken($color-med, 20%);
 				}
 				
-				&.hrd{
+				&.hard{
 					background:$color-hard;
 					border-color: darken($color-hard, 20%);
 				}
 				
-				&.crz{
+				&.crazy{
 					background:$color-crazy;
 					border-color: darken($color-crazy, 20%);
 				}
@@ -403,7 +404,7 @@ div#dashboard{
 					background:url(../images/icons/1star.png) repeat-x;
 				}
 
-				&.esy{
+				&.easy{
 					border-color: $color-easy;
 					em{
 						
@@ -412,30 +413,29 @@ div#dashboard{
 					h4{color:$color-easy;}
 				}
 
-				&.med{
+				&.medium{
 					border-color: $color-med;
 					em{
-						background:url(../images/icons/1star.png);
 						width:28px;
 					}
-					h4{color:$color-med;}
+					h4{
+						color:$color-med;
+					}
 				}
 
-				&.hrd{
+				&.hard{
 					border-color: $color-hard;
 					em{
-						background:url(../images/icons/1star.png);
 						width:42px;
 					}
 					h4{color:$color-hard;}
 				}
 
-				&.crz{
+				&.crazy{
 					border-color: $color-crazy;
 					
 					em{
-						background:url(../images/icons/1star.png);
-						width:70px;
+						width:56px;
 					}
 					
 					h4{color:$color-crazy;}
@@ -525,6 +525,7 @@ div#dashboard{
 					font-size:2rem;
 					font-weight: 700;
 				} 
+
 				p{
 					float:none;
 					margin-bottom:30px;
@@ -567,13 +568,13 @@ footer{
 	background-size: 1200px;
 	min-width: 1220px;
 	background-position: right top;
-	div{
+	div.content{
 		padding:120px;
 		color:#fff;
 		img{background: $color-brand; padding:20px;}
 		h1{
 			background:$color-brand;
-			width:500px;
+			width:460px;
 			font-size:1.5rem;
 			padding:20px;
 			margin-top:-15px;
@@ -595,12 +596,14 @@ footer{
 
 //Modal Box
 #modal{
-	position:absolute;
+	position:fixed;
 	z-index: 100;
 	background:rgba(#fff, 0.85);
 	width:100%;
 	height: 100%;
 	text-align: center;
+	top:0;
+	display:none;
 
 	.close-modal{
 		background:#ddd;
