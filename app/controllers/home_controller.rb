@@ -3,5 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @challenges = current_user.challenges
+  	logger.info @challenges
   end
 end

@@ -1,7 +1,7 @@
 <%= render 'shared/difficulty_filter', header: "Today's Challenges" %>
 <section class="challenge-list">
 
-<% if @challenges.nil? %>
+<% if @challenges.empty? %>
   <%= render 'empty_challenge' %>
 <% elsif @challenges.is_done? %>
   <%= render 'empty_done' %>

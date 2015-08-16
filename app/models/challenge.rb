@@ -14,12 +14,15 @@ class Challenge < ActiveRecord::Base
   end
 
   def self.is_done?
+    return false if for_today.empty?
     count = for_today.count 
     done_count = for_today.done.count
     count == done_count
+
   end
 
   def self.has_pending?
+    return false if for_today.empty?
     count = for_today.count 
     done_count = for_today.done.count
     count != done_count

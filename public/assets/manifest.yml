@@ -25,9 +25,5 @@ logo.png: logo-87aeca3673bc965bdd7d2716eb9d75af.png
 logo/index.png: logo-87aeca3673bc965bdd7d2716eb9d75af.png
 mac-up.png: mac-up-cdece329d2a051b629232c7f38a59d80.png
 mac-up/index.png: mac-up-cdece329d2a051b629232c7f38a59d80.png
-application.js: application-d746b0ed96d6a855f66a3a31dafe6467.js
-application/index.js: application-d746b0ed96d6a855f66a3a31dafe6467.js
-application.css: application-875f0d42a52ff5536404da8fda8d423b.css
-application/index.css: application-875f0d42a52ff5536404da8fda8d423b.css
 jquery.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
 jquery/index.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
