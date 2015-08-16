@@ -4,7 +4,6 @@ class ChallengesController < ApplicationController
   def index
 	  @graph = Koala::Facebook::API.new(current_user.token)
     @friends = @graph.get_connections("me", "friends")
-    render json: @friends
     @modal = true
   end
 
@@ -13,7 +12,7 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    challenge = Challenge.new(user_id: current_user.id, name: params[:name], exp: params[:exp])
+    challenge = Challenge.new(user_id: params[:user_id], sender_id: current_user.id, name: params[:name], exp: params[:exp])
 
     if challenge.save
       flash[:notice] = "Challenge created successfuly"

@@ -11,8 +11,12 @@
     <li class="<%= challenge.difficulty %>">
      <h4><%= challenge.difficulty[0].upcase %></h4>
       <div class="sender">
-       <%=image_tag challenge.sender.img if challenge.sender.img.present? %>
-       <p>from <%= challenge.sender.name.capitalize %></p>
+        <% if challenge.sender.img.present? %>
+          <%= image_tag challenge.sender.img  %>
+        <% else %>
+          <%= image_tag 'dummy/user-b1.jpg'  %>
+        <% end %>
+        <p>from <%= challenge.sender.name.capitalize %></p>
       </div>
       <p><%= challenge.name %></p>
       <em class="reward"><%= challenge.exp %> star</em>
