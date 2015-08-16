@@ -36,9 +36,15 @@
 				x:'0'
 			});
 	}
-
+	var notiShown = false;
 	$('.show-noti').click(function(){
-		showNotification();
+		if(notiShown){
+			hideNotification();
+			notiShown = false;
+		}else{
+			notiShown = true;
+			showNotification();
+		}
 	});
 	$('.hide-noti').click(function(){
 		hideNotification();
