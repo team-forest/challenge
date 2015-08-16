@@ -3,8 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @challenges = current_user.challenges
-	  @graph = Koala::Facebook::API.new(current_user.token)
-    @friends = @graph.get_connections("me", "friends")
   end
 
   def mark_as_done
@@ -12,6 +10,5 @@ class HomeController < ApplicationController
     challenge.status = 'done'
     challenge.save
     render nothing: true
-
   end
 end

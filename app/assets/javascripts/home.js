@@ -39,13 +39,21 @@ $(document).ready(function() {
     });
   });
 
+  var diffname = ['easy','medium','hard','crazy'];
   $('.send').click(function() {
-    $('#difficulty').val($(this).data('difficulty'));
+    var exp = $(this).data('difficulty');
+    var diff = diffname[exp - 1];
+    console.log(exp);
+    console.log(diff);
+    
+    $('#cpnl').addClass(diff);
+    $('#clbl').html(diff);
+    $('#exp').val(exp);
     $('#name').val($(this).data('name'));
     $('#modalName').text($(this).data('name'));
   });
 
-  $('.send-challenge').click(function() {
+  $('.challenge-user').click(function() {
     $('#user_id').val($(this).data('user-id')); 
     $('#sendForm').submit();
   });

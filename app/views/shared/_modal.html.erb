@@ -2,12 +2,12 @@
     <a class="close-modal" href="#">X</a>
     <section class="card friend-list">
       <h6>Send challenge to Friends</h6>
-      <p class="challenge easy"><em>Easy</em> Do 3 Sit-ups!</p>
+      <p class="challenge" id='cpnl'><em id='clbl'></em> <span id="modalName"></span></p>
       <div class="friends">
 
 
   <%= form_tag '/challenges', id: 'sendForm' do %>
-    <input type='hidden' name='difficulty' id='difficuty' />
+    <input type='hidden' name='exp' id='exp' />
     <input type='hidden' name='name' id='name' />
     <input type='hidden' name='user_id' id='user_id' />
   <% end %>
@@ -16,9 +16,9 @@
         <% @friends.each do |friend| %>
             <% if friend.present? %>
               <li>
-              <p class="send-challenge" data-user-id='<%= friend['id'] %>'>
+              <p >
                 <%= friend['name'] %></p>
-              <a href="#">Challenge</a>
+              <a class="challenge-user" data-user-id='<%= friend['id'] %>'href="#">Challenge</a>
               </a>
               </li>
             <% end %>
