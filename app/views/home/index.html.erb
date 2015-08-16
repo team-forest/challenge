@@ -1,83 +1,29 @@
 <%= render 'shared/difficulty_filter', header: "Today's Challenges" %>
 <section class="challenge-list">
 
-<%if @status.eql? 'pending'%>
+<% if @challenges.nil? %>
+  <%= render 'empty_challenge' %>
+<% elsif @challenges.is_done? %>
+  <%= render 'empty_done' %>
+<% elsif @challenges.has_pending? %>
   <ul>
-              <li class="esy">
-                <h4>E</h4>
-                <div class="sender">
-                 <%=image_tag 'dummy/user-g3.jpg'%>
-                  <p>from Elizabeth</p>
-                </div>
-                <p>Do 3 push-ups!</p>
-                <em class="reward">1 star</em>
-                <span class="status completed">Completed</span>
-              </li>
-              <li class="esy">
-                <h4>E</h4>
-                <div class="sender">
-                 <%=image_tag 'dummy/user-g3.jpg'%>
-                  <p>from Greta</p>
-                </div>
-                <p>Do 5 sit-ups!</p>
-                <em class="reward">1 star</em>
-                <a href="#" class="btn done">Mark as Done</a>
-              </li>
-              <li class="med">
-                <h4>M</h4>
-                <div class="sender">
-                 <%=image_tag 'dummy/user-g3.jpg'%>
-                  <p>from Christopher</p>
-                </div>
-                <p>Run 2 kilometers!</p>
-                <em class="reward">2 stars</em>
-                <a href="#" class="btn done">Mark as Done</a>
-              </li>
-              <li class="hrd">
-                <h4>H</h4>
-                <div class="sender">
-                 <%=image_tag 'dummy/user-g3.jpg'%>
-                  <p>from Jeff</p>
-                </div>
-                <p>Do 15 push-ups!</p>
-                <em class="reward">3 stars</em>
-                <a href="#" class="btn done">Mark as Done</a>
-              </li>
-              <li class="crz">
-                <h4>C</h4>
-                <div class="sender">
-                 <%=image_tag 'dummy/user-g3.jpg'%>
-                  <p>from Marc</p>
-                </div>
-                <p>Do 20 push-ups and 40 sit-ups!</p>
-                <em class="reward">5 stars</em>
-                <a href="#" class="btn done">Mark as Done</a>
-              </li>
-              <li class="esy">
-                <h4>E</h4>
-                <div class="sender">
-                 <%=image_tag 'dummy/user-g3.jpg'%>
-                  <p>from Dominique</p>
-                </div>
-                <p>Do 3 push-ups!</p>
-                <em class="reward">1 star</em>
-                <a href="#" class="btn done">Mark as Done</a>
-              </li>
-              <li class="esy">
-                <h4>E</h4>
-                <div class="sender">
-                 <%=image_tag 'dummy/user-g3.jpg'%>
-                  <p>from Romeo</p>
-                </div>
-                <p>Do 5 sit-ups!</p>
-                <em class="reward">1 star</em>
-                <a href="#" class="btn done">Mark as Done</a>
-              </li>
-              
-            </ul>
-<%elsif @status.eql? 'none'%>
-<%= render 'empty_challenge' %>
-<%else%>
-<%= render 'empty_done' %>
-<%end%>
+    <% @challenges.each do |challenge| %>
+    <li class="<%= challenge.difficulty %>">
+     <h4><%= challenge.difficulty[0].upcase %></h4>
+      <div class="sender">
+       <%=image_tag challenge.sender.img if challenge.sender.img.present? %>
+       <p>from <%= challenge.sender.name.capitalize %></p>
+      </div>
+      <p><%= challenge.name %></p>
+      <em class="reward"><%= challenge.exp %> star</em>
+      <% if challenge.status == 'done'%>
+        <span class="status completed">Completed</span>
+      <% else %>
+        <a href="#" class="btn done">Mark as Done</a>
+      <% end %>
+    </li>
+
+    <% end %>
+  </ul>
+<% end %>
 </section>

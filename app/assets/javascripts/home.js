@@ -23,12 +23,14 @@
     });
   }
 
+$(document).ready(function() {
   $('.mark-done').click(function(){
     reduceItem($(this).parent());
     $(this).parent().fadeOut();
   });
 
   $('.open-modal').click(function(){
+    console.log('yo');
     //Fade In Modal
     $('#modal').fadeIn(500);
 
@@ -36,7 +38,6 @@
     $('.close-modal').click(function(){ 
       $('#modal').fadeOut(500);
     });
-
   });
 
   //Close modal if user clicks outside the modal
@@ -48,3 +49,4 @@
   $('#modal section').click(function(event){
     event.stopPropagation();
   });
+});

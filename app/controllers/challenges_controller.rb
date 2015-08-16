@@ -3,8 +3,8 @@ class ChallengesController < ApplicationController
 
   def index
 	  @graph = Koala::Facebook::API.new(current_user.token)
-    @friends = @graph.get_connections("me", "taggable_friends")
-
+    @friends = @graph.get_connections("me", "friends")
+    render json: @friends
     @modal = true
   end
 
