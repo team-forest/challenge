@@ -74,3 +74,12 @@
 		$('#modal section').click(function(event){
 			event.stopPropagation();
 		});
+
+
+
+
+	$('a#test').click(function() {
+    $('#test').show;
+    $(this).text($(this).text() == 'Completed' ? 'Mark as Done' : 'Completed');
+    
+	});
