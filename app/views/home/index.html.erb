@@ -28,6 +28,14 @@
           <a href="#" class="btn done">Mark as Done</a>
         <% end %>
       </li>
+        <p>from <%= challenge.sender.name.capitalize %></p>
+      </div>
+      <p><%= challenge.name %></p>
+      <em class="reward"><%= challenge.exp %> star</em>
+      <% if challenge.status == 'done'%>
+        <span class="status completed">Completed</span>
+      <% else %>
+        <a href="#" class="btn done" id="test">Mark as Done</a>
       <% end %>
     <% end %>
   </ul>
