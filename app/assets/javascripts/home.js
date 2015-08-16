@@ -30,7 +30,6 @@ $(document).ready(function() {
   });
 
   $('.open-modal').click(function(){
-    console.log('yo');
     //Fade In Modal
     $('#modal').fadeIn(500);
 
@@ -40,6 +39,16 @@ $(document).ready(function() {
     });
   });
 
+  $('.send').click(function() {
+    $('#difficulty').val($(this).data('difficulty'));
+    $('#name').val($(this).data('name'));
+    $('#modalName').text($(this).data('name'));
+  });
+
+  $('.send-challenge').click(function() {
+    $('#user_id').val($(this).data('user-id')); 
+    $('#sendForm').submit();
+  });
   //Close modal if user clicks outside the modal
   $('#modal').click(function(){
     $(this).fadeOut(500);

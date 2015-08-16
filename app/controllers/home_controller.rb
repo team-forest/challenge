@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 
   def index
     @challenges = current_user.challenges
-  	logger.info @challenges
+	  @graph = Koala::Facebook::API.new(current_user.token)
+    @friends = @graph.get_connections("me", "friends")
   end
 end

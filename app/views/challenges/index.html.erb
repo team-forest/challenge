@@ -1,35 +1,64 @@
 <%= render 'shared/difficulty_filter', header: "Challenge a friend" %>
 <section class="challenge-list">
   <ul>
-    <li class="esy">
+    <li class="easy">
       <h4>E</h4>
       <p>Do 3 push-ups!</p>
       <em class="reward">1 star</em>
-      <a href="#" class="btn send open-modal">Send Challenge</a>
+      <a href="#" 
+        class="btn send open-modal"
+        data-difficulty="1"
+        data-name='Do 3 push-ups!'>
+          Send Challenge
+      </a>
     </li>
-    <li class="esy">
+    <li class="easy">
       <h4>E</h4>
       <p>Do 5 sit-ups!</p>
       <em class="reward">1 star</em>
-      <a href="#" class="btn send open-modal">Send Challenge</a>
+
+      <a href="#" 
+        class="btn send open-modal"
+        data-difficulty="1"
+        data-name='Do 5 push-ups!'>
+          Send Challenge
+      </a>
     </li>
-    <li class="med">
+    <li class="medium">
       <h4>M</h4>
       <p>Run 2 kilometers!</p>
       <em class="reward">2 stars</em>
-      <a href="#" class="btn send open-modal">Send Challenge</a>
+
+      <a href="#" 
+        class="btn send open-modal"
+        data-difficulty="2"
+        data-name='Run 2 kilometers!'>
+          Send Challenge
+      </a>
     </li>
-    <li class="hrd">
+    <li class="hard">
       <h4>H</h4>
       <p>Do 15 push-ups!</p>
       <em class="reward">3 stars</em>
-      <a href="#" class="btn send open-modal">Send Challenge</a>
+      
+      <a href="#" 
+        class="btn send open-modal"
+        data-difficulty="3"
+        data-name='Do 15 push-ups!'>
+          Send Challenge
+      </a>
     </li>
-    <li class="crz">
+    <li class="crazy">
       <h4>C</h4>
-      <p>Do 20 push-ups and 40 sit-ups!</p>
+      <p>Do 20 push-ups and 40 sit-ups... at the same time!</p>
       <em class="reward">5 stars</em>
-      <a href="#" class="btn send open-modal">Send Challenge</a>
+      
+      <a href="#" 
+        class="btn send open-modal"
+        data-difficulty="4"
+        data-name='Do 20 push-ups and 40 sit-ups... at the same time!'>
+          Send Challenge
+      </a>
     </li>
   </ul>
 </section>

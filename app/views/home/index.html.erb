@@ -1,32 +1,34 @@
 <%= render 'shared/difficulty_filter', header: "Today's Challenges" %>
 <section class="challenge-list">
 
-<% if @challenges.empty? %>
+<% if !@challenges.present? %>
   <%= render 'empty_challenge' %>
 <% elsif @challenges.is_done? %>
   <%= render 'empty_done' %>
 <% elsif @challenges.has_pending? %>
   <ul>
     <% @challenges.each do |challenge| %>
-    <li class="<%= challenge.difficulty %>">
-     <h4><%= challenge.difficulty[0].upcase %></h4>
-      <div class="sender">
-        <% if challenge.sender.img.present? %>
-          <%= image_tag challenge.sender.img  %>
-        <% else %>
-          <%= image_tag 'dummy/user-b1.jpg'  %>
-        <% end %>
-        <p>from <%= challenge.sender.name.capitalize %></p>
-      </div>
-      <p><%= challenge.name %></p>
-      <em class="reward"><%= challenge.exp %> star</em>
-      <% if challenge.status == 'done'%>
-        <span class="status completed">Completed</span>
-      <% else %>
-        <a href="#" class="btn done">Mark as Done</a>
-      <% end %>
-    </li>
 
+      <% if challenge.present? %>
+      <li class="<%= challenge.difficulty %>">
+       <h4><%= challenge.difficulty[0].upcase %></h4>
+        <div class="sender">
+          <% if challenge.sender.img.present? %>
+            <%= image_tag challenge.sender.img  %>
+          <% else %>
+            <%= image_tag 'dummy/user-b1.jpg'  %>
+          <% end %>
+          <p>from <%= challenge.sender.name.capitalize %></p>
+        </div>
+        <p><%= challenge.name %></p>
+        <em class="reward"><%= challenge.exp %> star</em>
+        <% if challenge.status == 'done'%>
+          <span class="status completed">Completed</span>
+        <% else %>
+          <a href="#" class="btn done">Mark as Done</a>
+        <% end %>
+      </li>
+      <% end %>
     <% end %>
   </ul>
 <% end %>
