@@ -1,15 +1,55 @@
 <% if user_signed_in? %>
   <aside>
+    <div class="notification-list">
+          <h6>Notifications <a href="#" class="hide-noti">hide</a></h6>
+          <ul>
+            <li class="new">
+              <%=image_tag 'dummy/user-g1.jpg'%>
+              <div>
+                <p><em>Kate Winslet</em> has finished your challenge.</p>
+                <small>4 hours ago.</small>
+              </div>
+            </li>
+            <li>
+              <%=image_tag 'dummy/user-g1.jpg'%>
+              <div>
+                <p><em>Anne Robinne Matias</em> has finished your challenge.</p>
+                <small>7 hours ago.</small>
+              </div>
+            </li>
+            <li>
+              <%=image_tag 'dummy/user-g1.jpg'%>
+              <div>
+                <p><em>Kate Winslet</em> has finished your challenge.</p>
+                <small>4 hours ago.</small>
+              </div>
+            </li>
+            <li>
+              <%=image_tag 'dummy/user-g1.jpg'%>
+              <div>
+                <p><em>Anne Robinne Matias</em> has finished your challenge.</p>
+                <small>7 hours ago.</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+
     <div class="lvl">
       <p class="lbl">level</p>
       <p class="num">1</p>
     </div>
-    
-    <%=image_tag current_user.img, class: "user-img"%>
+    <div class="stars">Total Stars: 3</div>
+	<%=image_tag current_user.img, class: "user-img"%>
+
     <h1><%=current_user.name%></h1>
     <h2>Amateur</h2>
+    <div class="gauge">
+					<p>Earn 7 more stars to level-up</p>
+					<span style="width:30%;"></span>
+	</div>
 
   </aside>
 
- <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 <%end%>

@@ -19,8 +19,14 @@ icons/4stars.png: icons/4stars-f3240e8532ff2088b8469a1ef985d2b1.png
 icons/4stars/index.png: icons/4stars-f3240e8532ff2088b8469a1ef985d2b1.png
 icons/5stars.png: icons/5stars-b23dce897625d88f6eff06c12dfdd939.png
 icons/5stars/index.png: icons/5stars-b23dce897625d88f6eff06c12dfdd939.png
-application.js: application-47b44084585f598b722954036f95b1b4.js
-application/index.js: application-47b44084585f598b722954036f95b1b4.js
+icons/noti.png: icons/noti-609c6dbe15aae63513adcd3434697a4f.png
+icons/noti/index.png: icons/noti-609c6dbe15aae63513adcd3434697a4f.png
+logo.png: logo-87aeca3673bc965bdd7d2716eb9d75af.png
+logo/index.png: logo-87aeca3673bc965bdd7d2716eb9d75af.png
+mac-up.png: mac-up-cdece329d2a051b629232c7f38a59d80.png
+mac-up/index.png: mac-up-cdece329d2a051b629232c7f38a59d80.png
+application.js: application-d746b0ed96d6a855f66a3a31dafe6467.js
+application/index.js: application-d746b0ed96d6a855f66a3a31dafe6467.js
 application.css: application-875f0d42a52ff5536404da8fda8d423b.css
 application/index.css: application-875f0d42a52ff5536404da8fda8d423b.css
 jquery.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
