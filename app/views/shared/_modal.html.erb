@@ -4,6 +4,14 @@
       <h6>Send challenge to Friends</h6>
       <p class="challenge easy"><em>Easy</em> Do 3 Sit-ups!</p>
       <div class="friends">
+
+
+  <%= form_tag '/challenges', id: 'sendForm' do %>
+    <input type='hidden' name='difficulty' id='difficuty' />
+    <input type='hidden' name='name' id='name' />
+    <input type='hidden' name='user_id' id='user_id' />
+  <% end %>
+
         <ul>
         <% @friends.each do |friend| %>
             <% if friend.present? %>
