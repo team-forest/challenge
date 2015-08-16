@@ -7,13 +7,14 @@ class ChallengesController < ApplicationController
   end
 
    def create
-    challenge = Challenge.new(user_id: params[:user_id], sender_id: current_user.id, name: params[:name], exp: params[:exp])
+     user= User.find_by_uid(params[:user_id])
+    challenge = Challenge.new(user_id: user.id, sender_id: current_user.id, name: params[:name], exp: params[:exp])
 
     if challenge.save
       flash[:notice] = "Challenge created successfuly"
     else
       flash[:error] = "Unable to create a challenge"
     end
-    redirect_to :index
+    redirect_to '/challenges'
   end
 end
