@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :encrypted_password, :password, :password_confirmation, :remember_me, :name, :title, :img, :uid, :token
 
   has_many :challenges
+  has_many :challenge_sent, class_name: 'Challenge'
   has_many :achievements
 
   def self.find_for_facebook_oauth(auth)
