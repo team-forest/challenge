@@ -2,8 +2,10 @@ class ChallengesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @challenges = ChallengeDatum.all
 	  @graph = Koala::Facebook::API.new(current_user.token)
     @friends = @graph.get_connections("me", "friends")
+    @modal = true
   end
 
    def create

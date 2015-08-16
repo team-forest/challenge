@@ -21,11 +21,13 @@
         </div>
         <p><%= challenge.name %></p>
         <em class="reward"><%= challenge.exp %> star</em>
-        <% if challenge.status == 'done'%>
-          <span class="status completed">Completed</span>
-        <% else %>
-          <a href="#" class="btn done" id='test'>Mark as Done</a>
-        <% end %>
+        <div id='progress'>
+          <% if challenge.status == 'done'%>
+            <span class="status completed">Completed</span>
+          <% else %>
+            <a href="#" data-id='<%= challenge.id %>' class="btn done" id='test'>Mark as Done</a>
+          <% end %>
+      </div>
       </li>
     <% end %>
   </ul>

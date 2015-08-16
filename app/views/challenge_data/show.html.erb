@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @challenge_datum.name %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @challenge_datum.difficulty %>
+</p>
+
+
+<%= link_to 'Edit', edit_challenge_datum_path(@challenge_datum) %> |
+<%= link_to 'Back', challenge_data_path %>

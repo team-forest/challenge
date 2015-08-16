@@ -3,4 +3,6 @@ Spotisquare::Application.routes.draw do
 
   root :to => 'home#index'
   resources :challenges
+  resources :challenge_data
+  get '/done', to: 'home#mark_as_done'
 end

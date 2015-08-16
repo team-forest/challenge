@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150816012616) do
+ActiveRecord::Schema.define(:version => 20150816064424) do
 
   create_table "achievements", :force => true do |t|
     t.string   "name"
     t.string   "badge"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "challenge_data", :force => true do |t|
+    t.string   "name"
+    t.integer  "difficulty"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

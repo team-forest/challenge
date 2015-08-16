@@ -49,6 +49,21 @@ $(document).ready(function() {
     $('#user_id').val($(this).data('user-id')); 
     $('#sendForm').submit();
   });
+
+  $('.done').click(function() {
+    var msg = '<span class="status completed">Completed</span>'; 
+    var id = $(this).data('id');
+
+    $.ajax({
+      url: '/done',
+      type: "GET",
+      data: {id: id},
+      success: function(data){
+        $('#progress').html(msg); 
+      }
+    });
+  });
+
   //Close modal if user clicks outside the modal
   $('#modal').click(function(){
     $(this).fadeOut(500);
